@@ -7,6 +7,9 @@ import TextareaCounter from "./components/TextareaCounter";
 import TextareaMD5Converter from "./components/TextareaMD5Converter";
 import TextareaBase64Encoder from "./components/TextareaBase64Encoder";
 import TextareaBase64Decoder from "./components/TextareaBase64Decoder";
+import EuclideanDistanceCalculator from "./components/EuclideanDistanceCalculator";
+import TextToLowercaseConverter from "./components/TextToLowercaseConverter";
+import TextToUppercaseConverter from "./components/TextToUppercaseConverter";
 
 function App() {
   return (
@@ -45,6 +48,27 @@ function App() {
             <h4>Base64 Decode</h4>
           </div>
           <TextareaBase64Decoder></TextareaBase64Decoder>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-12">
+            <h4>upperCASE</h4>
+          </div>
+          <TextToUppercaseConverter></TextToUppercaseConverter>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-12">
+            <h4>lowerCASE</h4>
+          </div>
+          <TextToLowercaseConverter></TextToLowercaseConverter>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-12">
+            <h4>Euclidean Distance</h4>
+          </div>
+          <EuclideanDistanceCalculator></EuclideanDistanceCalculator>
         </div>
       </div>
     </div>
