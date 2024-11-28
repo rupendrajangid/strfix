@@ -8,7 +8,7 @@ const Topbar = () => {
         <AppBar position="static" className="bg-indigo-600">
             <Toolbar>
                 <Typography variant="h6" className="text-white">
-                    Strfix
+                    Strfix By Rupendra Jangid
                 </Typography>
             </Toolbar>
         </AppBar>
