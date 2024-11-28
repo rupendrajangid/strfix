@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 import Topbar from "./components/Topbar.jsx";
 import Body from "./components/Body.jsx";
 import Footer from "./components/Footer.jsx";

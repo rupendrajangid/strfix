@@ -10,7 +10,7 @@ import TextToUppercaseConverter from "./TextToUppercaseConverter";
 
 const Body = () => {
     return (
-        <Container maxWidth="lg" className="py-8">
+        <Container maxWidth="lg" sx={{ mt: 8 }}>
             <Grid container spacing={4}>
                 {/* Meta */}
                 <Grid item xs={12}>
