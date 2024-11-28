@@ -1,30 +1,48 @@
 import React, { useState } from "react";
+import { TextField, Typography, Grid, Box, Paper } from "@mui/material";
 
 const TextToLowercaseConverter = () => {
-  const [text, setText] = useState("");
+    const [text, setText] = useState("");
 
-  const handleTextareaChange = (event) => {
-    const newText = event.target.value;
-    setText(newText.toLowerCase());
-  };
+    const handleTextareaChange = (event) => {
+        const newText = event.target.value;
+        setText(newText.toLowerCase());
+    };
 
-  return (
-    <div className="row">
-      <div className="col-lg-6">
-        paste
-        <textarea
-          className="form-control"
-          placeholder="Type your text here..."
-          onChange={handleTextareaChange}
-        />
-      </div>
-
-      <div className="col-lg-6">
-        breaks
-        <textarea className="form-control" value={text} disabled />
-      </div>
-    </div>
-  );
+    return (
+        <Box className="bg-white shadow-md p-6 rounded-md">
+            <Typography variant="h6" className="font-bold mb-4 text-indigo-600">
+                Text to Lowercase Converter
+            </Typography>
+            <Grid container spacing={3}>
+                <Grid item xs={12} sm={6}>
+                    <TextField
+                        label="Input Text"
+                        variant="outlined"
+                        fullWidth
+                        multiline
+                        minRows={6}
+                        placeholder="Type or paste your text here..."
+                        onChange={handleTextareaChange}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Paper className="p-4 bg-gray-50">
+                        <TextField
+                            variant="filled"
+                            fullWidth
+                            multiline
+                            minRows={6}
+                            value={text}
+                            placeholder="Lowercase Output"
+                            disabled
+                            id="filled-disabled"
+                        />
+                    </Paper>
+                </Grid>
+            </Grid>
+        </Box>
+    );
 };
 
 export default TextToLowercaseConverter;
